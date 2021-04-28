@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "start": "node index.js -p $PORT"
+  },
   "devDependencies": {
     "live-server": "^1.2.1"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
