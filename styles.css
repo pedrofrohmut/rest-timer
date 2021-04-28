@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: #222;
+}
+
+h1 {
+  margin: 3vh 0 3vh 0;
+  text-align: center;
+  font-size: 10vh;
+  color: #d5d5d5;
+}
+
+.wrapper {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 30vw 30vw;
+  grid-gap: 4vh;
+  padding: 2rem;
+  width: calc(60vw + 2rem);
+}
+
+.wrapper button {
+  display: inline-block;
+  padding: 2vh 0;
+  font-size: 4rem;
+  border: 0;
+  border-radius: 1.0rem;
+  color: white;
+}
+
+.clock {
+  padding: 3vh 0 0 0;
+  font-size: 14rem;
+  color: #d5d5d5;
+  text-align: center;
+}
+
+.dots {
+  position: relative;
+  top: -1.4rem;
+}
+
+@keyframes blinker {
+  from { opacity: 1 }
+  to { opacity: 0.1 }
+}
+
+.blink {
+  animation: blinker 1000ms infinite;
+}

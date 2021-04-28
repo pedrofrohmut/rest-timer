@@ -1,0 +1,7 @@
+# VIM
+**.swp
+**.swo
+
+node_modules
+
+yarn.lock
