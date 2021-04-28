@@ -39,7 +39,7 @@ const startTimer = () => {
       clockDiv.classList.add("blink")
       setInterval(() => {
         clockDiv.classList.remove("blink")
-      }, 10000)
+      }, 1000)
       return
     }
     if (seconds > 0) {
