@@ -5,7 +5,7 @@ const App = express()
 
 App.use(express.static(path.resolve(__dirname + "/public")))
 
-App.get("/", (_, res) => { 
+App.get("/", (_, res) => {
   res.sendFile(path.resolve(__dirname + "/public/index.html"))
 })
 

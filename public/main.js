@@ -10,19 +10,18 @@ const MINUTE = 60 * SECOND
 let timerValue = 0
 let timerInterval = null
 
-const formatNumber = num => num < 10 ? "0" + num : num
+const formatNumber = num => (num < 10 ? "0" + num : num)
 
 const getFormatedTime = time => {
   let minutes = Math.floor(time / MINUTE)
-  let seconds = (time - (minutes * MINUTE)) / 1000
+  let seconds = (time - minutes * MINUTE) / 1000
   return {
-    seconds: formatNumber(seconds), 
-    minutes: formatNumber(minutes) 
+    seconds: formatNumber(seconds),
+    minutes: formatNumber(minutes)
   }
 }
 
-
-const setClock = (formatedTime) => {
+const setClock = formatedTime => {
   secSpan.innerText = formatedTime.seconds
   minSpan.innerText = formatedTime.minutes
 }
@@ -51,7 +50,7 @@ const startTimer = () => {
   }, 1000)
 }
 
-const setTimer = (time) => {
+const setTimer = time => {
   const formatedTime = getFormatedTime(time)
   setClock(formatedTime)
   startTimer()

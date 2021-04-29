@@ -1,54 +1,133 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+}
+
+#btn-1 {
+  background-color: #09f;
+}
+#btn-2 {
+  background-color: #06f;
+}
+#btn-3 {
+  background-color: #09c;
+}
+#btn-4 {
+  background-color: #069;
+}
+#btn-5 {
+  background-color: #099;
+}
+#btn-6 {
+  background-color: #0c9;
+}
+
 body {
   margin: 0;
-  max-width: 100vw;
-  overflow-x: hidden;
-  min-height: 100vh;
+  padding: 0;
+  height: 100vh;
   width: 100vw;
-  background-color: #222;
+  overflow: hidden;
+  background-color: #333;
 }
 
 h1 {
-  margin: 3vh 0 3vh 0;
+  margin: 4vh 0 3vh 0;
   text-align: center;
-  font-size: 10vh;
+  font-size: 6vh;
   color: #d5d5d5;
 }
 
 .wrapper {
-  margin: 0 auto;
   display: grid;
-  grid-template-columns: 30vw 30vw;
-  grid-gap: 4vh;
-  padding: 2rem;
-  width: calc(60vw + 2rem);
+  padding: 5vh 4vw 0;
+  grid-template-columns: 43vw 43vw;
+  grid-gap: 5vw;
 }
 
 .wrapper button {
-  display: inline-block;
-  padding: 2vh 0;
-  font-size: 4rem;
   border: 0;
-  border-radius: 1.0rem;
+  font-size: 2rem;
+  padding: 3vw;
+  border-radius: 0.5rem;
   color: white;
 }
 
 .clock {
-  padding: 3vh 0 0 0;
-  font-size: 14rem;
   color: #d5d5d5;
+  font-size: 37vw;
   text-align: center;
+  padding-top: 5vh;
 }
 
 .dots {
   position: relative;
-  top: -1.4rem;
+  top: -0.9rem;
 }
 
 @keyframes blinker {
-  from { opacity: 1 }
-  to { opacity: 0.1 }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.1;
+  }
 }
 
 .blink {
   animation: blinker 1000ms infinite;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  padding: 1vh 0;
+  width: 100vw;
+  text-align: center;
+  color: #666;
+}
+
+@media (min-width: 480px) {
+  .wrapper {
+    grid-gap: 1.3rem;
+  }
+}
+
+@media (min-width: 720px) {
+  .wrapper {
+    grid-gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+    max-width: calc(800px + 2rem);
+    margin: 0 auto;
+  }
+
+  .wrapper button {
+    font-size: 2.5rem;
+    padding: 1.2rem 0;
+    max-width: 400px;
+  }
+
+  .clock {
+    font-size: 14rem;
+  }
+}
+
+@media (min-width: 920px) {
+  .wrapper {
+    grid-template-columns: 400px 400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .wrapper button {
+    font-size: 3.5rem;
+  }
 }
